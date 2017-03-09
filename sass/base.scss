@@ -1,0 +1,552 @@
+@import '_variables.scss';
+@import '_reset.scss';
+@import '_theme.scss';
+
+// PARTS
+
+.login-register-container{
+    width: 400px;
+    display: block;
+    position:absolute;
+    margin: 0 auto;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background: $c_secondary;
+    box-shadow: inset 0 1px 2px rgba(255,255,255, .35), 0px 1px 6px rgba(0,246,255,.5);
+    border-radius: 70px;
+    .content {
+        padding: 40px 60px;
+        .title {
+            margin-bottom: 25px;
+            p {
+              font-family: $ff_primary;
+              font-size: 40px;
+              text-transform: lowercase;
+              font-weight: bold;
+            }
+        }
+        .submit-container {
+            position: relative;
+            .submit-mask {
+                position: absolute;;
+                top: 0;
+                bottom:0;
+                left:0;
+                right: 0;
+                z-index: 1;
+            }
+            .submit-mask.inactive {
+                display: none;
+            }
+        }
+
+        .alternate-register {
+            padding-top: 30px;
+            h4 {
+                padding-bottom: 10px;
+                font-family: $ff_primary;
+                }
+            .social-button i {
+                top: 0;
+                bottom:0;
+                left:0;
+                right: 0;
+                margin-right: -2px;
+            }
+
+        }
+        .error {
+   color: #ff0000;
+   font-size: 12px;
+   margin-top: 5px;
+   margin-bottom: 0;
+}
+
+    .inputTxtError {
+   border: 1px solid #ff0000;
+   color: #0e0e0e;
+}
+    }
+}
+
+
+// PAGES
+// REGISTER
+.register {
+    background-image: url("img/register-background.png");
+    background-size: cover;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    .terms-container {
+        padding-top: 10px;
+        margin-bottom: -15px;
+        .terms-text {
+            font-family: $ff_primary;
+            font-size: 12px;
+            display: inline-block;
+          a {
+            text-decoration: none;
+          }
+        }
+        .terms-text.active {
+            color: red;
+            a {
+                color: red;
+            }
+        }
+    }
+}
+.terms-popup {
+    min-width: 800px;
+    min-height: 700px;
+    border-radius: 70px;
+    position: absolute;
+    font-family: $ff_primary;
+    margin: 0 auto;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    .title{
+        font-size: 40px;
+        padding: 20px 40px;
+        text-align: center;
+        border-bottom: 1px dotted black;
+    }
+    .content {
+        padding: 40px 40px;
+        text-align: center;
+    }
+    .demo_close {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 60px;
+        margin-bottom:34px;
+        width: 140px;
+        height: 30px;
+        font-size:20px;
+        font-family: $ff_primary;
+        text-transform: lowercase;
+        background: #cc0000;
+        border: 1px solid $c_third;
+        border-radius: 4px;
+        color: #eee;
+        cursor: pointer;
+        text-shadow:0px -1px 0px rgba(0,0,0,.5);
+        &:hover{
+            background: #cc0000;
+            border: 1px solid $c_third;
+            border-radius: 3px;
+            box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(255,255,255,.5),inset 0px -1px 2px rgba(255,255,255,.35);
+            text-shadow:0px 1px 1px rgba(0,0,0,.65);
+            -webkit-transition: all 0.40s ease-out;
+        }
+    }
+    .demo_agree {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 140px;
+        height: 30px;
+        margin-right: 60px;
+        margin-bottom: 34px;
+        font-size:20px;
+        font-family: $ff_primary;
+        text-transform: lowercase;
+        background: #00cc00;
+        border: 1px solid $c_third;
+        border-radius: 4px;
+        color: #eee;
+        cursor: pointer;
+        text-shadow:0px -1px 0px rgba(0,0,0,.5);
+        &:hover{
+            background: #00cc00;
+            border: 1px solid $c_third;
+            border-radius: 3px;
+            box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(255,255,255,.5),inset 0px -1px 2px rgba(255,255,255,.35);
+            text-shadow:0px 1px 1px rgba(0,0,0,.65);
+            -webkit-transition: all 0.40s ease-out;
+        }
+    }
+}
+
+// LOGIN
+
+.login {
+    background-image: url("img/login-background.jpg");
+    background-size: cover;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    .forgot-container {
+        padding-top: 10px;
+        margin-bottom: -15px;
+        .forgot-text {
+            font-family: $ff_primary;
+            font-size: 12px;
+            display: inline-block;
+            a {
+            text-decoration: none;
+            }
+        }
+    }
+}
+.forgot-popup {
+    min-width: 700px;
+    min-height: 350px;
+    border-radius: 70px;
+    position: absolute;
+    font-family: $ff_primary;
+    margin: 0 auto;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    .title{
+        font-size: 40px;
+        padding: 20px 40px;
+        text-align: center;
+        border-bottom: 1px dotted black;
+    }
+    .content {
+        padding: 30px 40px;
+        text-align: center;
+    }
+    input[type="email"]{
+        width: 50%;
+        margin: -10px auto;
+    }
+    .demo_close {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin-left: 60px;
+        margin-bottom:34px;
+        width: 140px;
+        height: 30px;
+        font-size:20px;
+        font-family: $ff_primary;
+        text-transform: lowercase;
+        background: #cc0000;
+        border: 1px solid $c_third;
+        border-radius: 4px;
+        color: #eee;
+        cursor: pointer;
+        text-shadow:0px -1px 0px rgba(0,0,0,.5);
+        &:hover{
+            background: #cc0000;
+            border: 1px solid $c_third;
+            border-radius: 3px;
+            box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(255,255,255,.5),inset 0px -1px 2px rgba(255,255,255,.35);
+            text-shadow:0px 1px 1px rgba(0,0,0,.65);
+            -webkit-transition: all 0.40s ease-out;
+        }
+    }
+}
+
+// PRODUCT
+.product {
+        min-height: 40rem;
+        margin: 0 auto;
+        font-family: $ff_primary;
+        .content.display {
+            padding: 40px 0px;
+            position: relative;
+            min-height: 40rem;
+        }
+        .info {
+            display: inline-block;
+            position: absolute;
+            padding: 0px;
+            text-align: left;
+
+            .title {
+                padding-top: 20px;
+                text-align: left;
+            }
+            .rateYo {
+                padding-bottom: 15px;
+            }
+            .normal-price, .discounted-price {
+                display: inline-block;
+                padding-top: 20px;
+                padding-bottom: 15px;
+            }
+            .normal-price {
+                font-size: 24px;
+            }
+            .discounted-price {
+                text-decoration:line-through;
+                color: #cc0000;
+                font-size: 16px;
+            }
+            .color {
+                margin-bottom: 10px;
+            }
+            .shipping {
+                .plane-shipping input {
+                    width: 30%;
+                }
+            }
+
+            .quantity {
+                padding-bottom: 15px;
+                .sp-quantity {
+                    width:124px;
+                    height:42px;
+                    font-family:"Nova Round";
+                }
+                .sp-minus {
+                    width:40px;
+                    height:40px;
+                    border:1px solid #e1e1e1;
+                    float:left;
+                    text-align:center;
+                }
+                .sp-input {
+                    width:40px;
+                    height:40px;
+                    border:1px solid #e1e1e1;
+                    border-left:0px solid black;
+                    float:left;
+                }
+                .sp-plus {
+                    width:40px;
+                    height:40px;
+                    border:1px solid #e1e1e1;
+                    border-left:0px solid #e1e1e1;
+                    float:left;
+                    text-align:center;
+                }
+                .sp-input input {
+                    width:30px;
+                    height:34px;
+                    text-align:center;
+                    font-family:"Nova Round";
+                    font-size: 20px;
+                    border: none;
+                    padding: 0px;
+                    margin: 2px auto;
+                }
+                .sp-input input:focus {
+                    border:1px solid #e1e1e1;
+                    border: none;
+                }
+                .sp-minus a, .sp-plus a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 10px;
+                    text-decoration: none;
+                }
+            }
+        }
+        .buttons {
+            padding-bottom: 15px;
+            .buy-icon {
+                position: absolute;
+                padding: 6px;
+                color: #fff;
+                font-size: 20px;
+            }
+            .buy-icon:before {
+                font-family: FontAwesome;
+                content: "\f07a";
+                display: inline-block;
+            }
+
+            .wishlist-icon {
+                position: absolute;
+                color: #fff;
+                padding-left: 6px;
+                padding-top: 16px;
+            }
+            .wishlist-icon:before {
+                font-family: FontAwesome;
+                content: "\f004";
+                display: inline-block;
+            }
+            .add-to-wishlist {
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .buy-button {
+                width: 140px;
+                height: 36px;
+                font-size:25px;
+                font-family: $ff_primary;
+                text-transform: lowercase;
+                background: #cc0000;
+                padding-left: 24px;
+                border: 1px solid $c_third;
+                border-radius: 4px;
+                color: #eee;
+                text-shadow:0px -1px 0px rgba(0,0,0,.5);
+                &:hover{
+                    background: $c-secondary;
+                    border: 1px solid $c_third;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(255,255,255,.5),inset 0px -1px 2px rgba(255,255,255,.35);
+                    text-shadow:0px 1px 1px rgba(0,0,0,.65);
+                    -webkit-transition: all 0.40s ease-out;
+                }
+            }
+            .add-to-wishlist {
+                height: 30px;
+                font-size:20px;
+                font-family: $ff_primary;
+                text-transform: lowercase;
+                background: #00cc00;
+                padding-left: 24px;
+                border: 1px solid $c_third;
+                border-radius: 4px;
+                color: #eee;
+                cursor: pointer;
+                text-shadow:0px -1px 0px rgba(0,0,0,.5);
+                &:hover{
+                    background: $c-secondary;
+                    border: 1px solid $c_third;
+                    border-radius: 3px;
+                    box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(255,255,255,.5),inset 0px -1px 2px rgba(255,255,255,.35);
+                    text-shadow:0px 1px 1px rgba(0,0,0,.65);
+                    -webkit-transition: all 0.40s ease-out;
+                }
+            }
+        }
+    }
+
+.product-description {
+    font-family: "Nova Round";
+    .title {
+        text-align: left;
+        padding-bottom: 20px;
+    }
+    .text {
+        text-align: left;
+    }
+}
+
+.product-specs {
+    padding-top: 20px;
+    font-family: "Nova Round";
+    li {
+        padding-left: 10px;
+    }
+    .title {
+        text-align: left;
+        padding-bottom: 10px;
+    }
+    .detail-title {
+        text-align: left;
+        padding: 10px 0px;
+    }
+    .content {
+        padding: 10px 0px;
+    }
+    .list {
+        padding: 0px;
+    }
+    ul li:nth-child(1n) {
+      background-color: #fff;
+    }
+    ul li:nth-child(2n) {
+      background-color: #ededed;
+    }
+    .product-specs ul li:first-child {
+      background-color: #1f1f1f;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+    }
+}
+
+.product-reviews {
+    font-family: "Nova Round";
+    padding-top: 20px;
+    .title {
+        text-align: left;
+        padding-bottom: 10px;
+    }
+    .review-wrapper {
+        padding-bottom: 20px;
+    }
+    .review-content {
+        & img {
+            width: 130px;
+            padding-top: 20px;
+            float:left;
+        }
+        & .text-right {
+            text-align: left;
+            padding-top: 30px;
+        }
+        .name {
+            font-size: 20px;
+        }
+        .country {
+            font-size: 16px;
+            padding-bottom: 10px
+        }
+        .date {
+            font-size: 14px;
+            text-decoration: underline;
+        }
+        .review-stars {
+            padding-top: 10px;
+            .star {
+                display: inline-block;
+            }
+            .star-not {
+                display: inline-block
+            }
+            .star:before {
+                font-family: FontAwesome;
+                content:'\f005';
+                color: $c-secondary;
+            }
+            .star-not:before {
+                font-family: FontAwesome;
+                content:'\f006';
+                color: #1c2f2f;
+            }
+        }
+        .reviewer {
+            .name, .country, .date {
+                top: 40%;
+                transform: translateY(-50%);
+                position: relative;
+            }
+        }
+    }
+    .text-right h2 {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    ul li:nth-child(1n) {
+      background-color: #fff;
+    }
+    ul li:nth-child(2n) {
+      background-color: #ededed;
+    }
+    .product-specs ul li:first-child {
+      background-color: #1f1f1f;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0px;
+    }
+}
+
+.related-products {
+
+}

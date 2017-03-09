@@ -1,0 +1,172 @@
+section {
+        padding: 30px 0px;
+}
+section .title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input {
+    display: block;
+    font-size: 16px;
+    font-family: $ff_primary;
+    text-transform: lowercase;
+    text-align: center;
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px 8px 10px 8px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    &:hover, &:focus{
+        opacity: .8;
+        border: 1px solid $c-primary;
+    }
+    &[type="text"]:focus, &[type="password"]:focus{
+        border: 1px solid $c-primary;
+        outline: none;
+    }
+    &[type="checkbox"]  {
+        border-radius: 5px;
+        border: 1px solid $c-primary;
+        width: 25px;
+        display: inline-block;
+    }
+    &[type="submit"] {
+        appearance: none;
+        opacity: .99;
+        width:160px;
+        margin-top: 30px;
+        margin-bottom: -10px;
+        font-size:20px;
+        font-family: $ff_primary;
+        text-transform: lowercase;
+        background: $c-primary;
+        box-shadow: inset 0 1px 2px rgba(255,255,255, .35), 0px 1px 6px rgba(0,246,255,.5);
+        border: 1px solid $c_third;
+        border-radius: 4px;
+        color: #eee;
+        cursor: pointer;
+        text-shadow:0px -1px 0px rgba(0,0,0,.5);
+        &:hover{
+            background: $c-primary;
+            width:160px;
+            border: 1px solid $c_third;
+            border-radius: 3px;
+            box-shadow: inset 0px 3px 16px rgba(0,0,0,.25),0px 1px 10px rgba(255,255,255,.5),inset 0px -1px 2px rgba(255,255,255,.35);
+            text-shadow:0px 1px 1px rgba(0,0,0,.65);
+            -webkit-transition: all 0.40s ease-out;
+        }
+    }
+    &[type=radio].with-font {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    &[type=radio].with-font + label:before {
+        font-family: FontAwesome;
+        display: inline-block;
+        content: "\f072";
+        letter-spacing: 10px;
+        font-size: 1.2em;
+        color: #535353;
+    }
+    &[type=radio].with-font:checked + label:before {
+        content: "\f072";
+        font-size: 1.2em;
+        color: darkgreen;
+        letter-spacing: 5px;
+        width: 35px 5px;
+    }
+    &[type=radio].with-font:focus + label:before {
+        font-weight: bold;
+        color:orange;
+    }
+}
+
+.social-button-container {
+    display: inline-block;
+    position: relative;
+    .social-button {
+        display: inline-block;
+        text-align: center;
+        font-family: $ff_primary;
+        padding: 10px 20px;
+        i {
+            display:inline-block;
+            margin-right: 10px;
+        }
+        p {
+            display:inline-block;
+        }
+    }
+    .social-mask {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right:0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.radio-custom {
+    opacity: 0;
+    position: absolute;
+}
+
+.radio-custom, .radio-custom-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.radio-custom-label {
+    position: relative;
+}
+
+.radio-custom + .radio-custom-label:before {
+    font-family: 'FontAwesome';
+    background: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+}
+.bicycle-shipping .radio-custom +.radio-custom-label:before {
+    content: '\f206';
+}
+.car-shipping .radio-custom +.radio-custom-label:before {
+    content: '\f1b9';
+}
+.plane-shipping .radio-custom +.radio-custom-label:before {
+    content: '\f072';
+}
+.checkbox-custom:checked + .checkbox-custom-label:before {
+    font-family: 'FontAwesome';
+    background: rebeccapurple;
+    color: #fff;
+}
+
+.radio-custom + .radio-custom-label:before {
+    border-radius: none;
+}
+
+.radio-custom:checked + .radio-custom-label:before {
+    font-family: 'FontAwesome';
+    color: $c-secondary;
+}
+.product-bk {
+    background-color: #fff;
+}

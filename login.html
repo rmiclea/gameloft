@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+          Login
+        </title>
+        <meta name="google-signin-client_id" content="410048874027-9lqsollp9knldr9lnpbi6bre927mavmb.apps.googleusercontent.com">
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.popupoverlay.js"></script>
+        <script src="https://use.fontawesome.com/88c4929313.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="css/tether.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <section class="login">
+            <div class="login-register-container">
+                <div class="content">
+                    <div class="title">
+                        <p>banana your</br> credentials</p>
+                    </div>
+                    <form action="" id="myform" class="credentials">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <div class="forgot-container">
+                          <a class="demo_open" href="#demo"><p class="forgot-text">Did you forget your badass password?</p></a>
+                          <div id="demo">
+                                <div class="forgot-popup">
+                                    <p class="title">Did you forget your badass password?</p>
+                                    <p class="content">If that's the case, send us your email and we'll have our minions dig it up for you.</p>
+                                    <input type="email" id="email" name="email" placeholder="Email">
+                                    <button class="demo_close">Close</button>
+                                    <button class="demo_agree">Send</button>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="submit-container">
+                              <input type="submit" class="submit-login" id="submit"  value="Login!">
+                        </div>
+                    </form>
+                    <div class="alternate-register">
+                        <h4> or connect with </h4>
+                        <div class="social-button-container">
+                            <div class="social-button">
+                                <i class="fa fa-google" aria-hidden="true"></i>
+                                <p> Google </p>
+                            </div>
+                            <div class="social-mask">
+                                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                            </div>
+                        </div>
+                        <div class="social-button-container">
+                            <div class="social-button">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <p> Facebook </p>
+                            </div>
+                            <div class="social-mask">
+                                <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="js/main.js"></script>
+        <script>
+        var email = document.getElementById("email");
+
+        email.addEventListener("keyup", function() {
+          if (email.validity.typeMismatch) {
+            email.setCustomValidity("I expect an e-mail, bananas!");
+          } else {
+            email.setCustomValidity("");
+          }
+        });
+        
+        function checkLoginState() {
+         FB.getLoginStatus(function(response) {
+         statusChangeCallback(response);
+           });
+         }
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '274174963017367',
+            xfbml      : true,
+            version    : 'v2.8'
+          });
+          FB.AppEvents.logPageView();
+        };
+        $(window).load(function() {
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=274174963017367";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        });
+
+        </script>
+    </body>
+</html>

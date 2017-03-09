@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+          Register
+        </title>
+        <meta name="google-signin-client_id" content="410048874027-9lqsollp9knldr9lnpbi6bre927mavmb.apps.googleusercontent.com">
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="js/tether.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.popupoverlay.js"></script>
+        <script src="https://use.fontawesome.com/88c4929313.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="css/tether.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+        <section class="register">
+            <div class="login-register-container">
+                <div class="content">
+                    <div class="title">
+                        <p> lets find our </br> villain</p>
+                    </div>
+                    <form action="" id="myform" class="credentials">
+                        <input type="text" name="FirstName" placeholder="First Name">
+                        <input type="text" name="LastName" placeholder="Last Name">
+                        <input type="email" id="email" name="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Confirm Password">
+                        <div class="terms-container">
+                          <input type="checkbox" id="checkbox">
+                          <p class="terms-text">I agree with the <a class="demo_open" href="#demo">Terms and Conditions</a>!</p>
+                          <div id="demo">
+                                <div class="terms-popup">
+                                      <p class="title">Terms of Use</p>
+                                      <p class="content">Poutine vape vegan crucifix, leggings hot chicken ramps godard tote bag distillery health goth cliche snackwave banh mi salvia. Man braid meditation flannel master cleanse paleo, trust fund forage retro. Fixie hot chicken blog waistcoat schlitz roof party mixtape post-ironic. Banjo fingerstache umami pitchfork, enamel pin poutine poke distillery listicle master cleanse put a bird on it. Pinterest hot chicken plaid tofu butcher, retro neutra migas mumblecore yr DIY. Tbh asymmetrical letterpress tumblr pitchfork butcher, taxidermy health goth poutine raw denim umami. Iceland next level snackwave cold-pressed, salvia prism flexitarian poke forage hoodie gentrify post-ironic.
+
+Tacos truffaut before they sold out man braid tilde. Pok pok occupy yr, portland roof party selvage swag pug craft beer mixtape fixie locavore. Succulents raclette mustache vape fap kale chips. Brunch beard fingerstache venmo leggings blue bottle. Photo booth ethical vape, coloring book street art brunch banh mi. Keffiyeh green juice distillery art party kickstarter man bun, chartreuse squid enamel pin. Plaid YOLO quinoa, art party authentic tumeric +1 jean shorts.
+
+Everyday carry green juice locavore shoreditch, sriracha XOXO 90's la croix venmo chambray snackwave edison bulb offal humblebrag. Locavore helvetica fap, lyft viral bitters echo park kickstarter whatever asymmetrical church-key leggings. Sriracha lumbersexual flexitarian microdosing yuccie hashtag lyft. DIY raw denim cronut venmo occupy, raclette cold-pressed. Mlkshk celiac truffaut, photo booth fanny pack tacos cronut thundercats butcher godard hot chicken retro. Tumblr migas taxidermy, freegan air plant +1 blue bottle VHS cold-pressed tumeric. Mumblecore pork belly paleo VHS asymmetrical authentic.
+
+Williamsburg hashtag farm-to-table bushwick quinoa enamel pin. Disrupt fap austin blog glossier lomo. Four dollar toast post-ironic polaroid, pickled franzen umami before they sold out migas knausgaard +1 selfies vaporware. Beard man braid forage actually. Jianbing williamsburg cardigan gochujang. Beard portland keffiyeh, letterpress pour-over 8-bit distillery hell of butcher. Sriracha kickstarter cronut, truffaut franzen sustainable gochujang normcore meh cornhole distillery pour-over deep v.</p>
+                                      <button class="demo_close">Close</button>
+                                      <button class="demo_agree">Agree</button>
+                                </div>
+                          </div>
+                        </div>
+                        <div class="submit-container">
+                              <div class="submit-mask"></div>
+                              <input type="submit" class="submit" id="submit"  value="Get in here!">
+                        </div>
+                    </form>
+                    <div class="alternate-register">
+                        <h4> or connect with </h4>
+                        <div class="social-button-container">
+                            <div class="social-button">
+                                <i class="fa fa-google" aria-hidden="true"></i>
+                                <p> Google </p>
+                            </div>
+                            <div class="social-mask">
+                                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                            </div>
+                        </div>
+                        <div class="social-button-container">
+                            <div class="social-button">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <p> Facebook </p>
+                            </div>
+                            <div class="social-mask">
+                                <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="js/main.js"></script>
+        <script>
+        var email = document.getElementById("email");
+
+        email.addEventListener("keyup", function() {
+          if (email.validity.typeMismatch) {
+            email.setCustomValidity("I expect an e-mail, bananas!");
+          } else {
+            email.setCustomValidity("");
+          }
+        });
+
+        function checkLoginState() {
+         FB.getLoginStatus(function(response) {
+         statusChangeCallback(response);
+           });
+         }
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '274174963017367',
+            xfbml      : true,
+            version    : 'v2.8'
+          });
+          FB.AppEvents.logPageView();
+        };
+        $(window).load(function() {
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8&appId=274174963017367";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        });
+        </script>
+    </body>
+</html>
