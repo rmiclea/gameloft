@@ -766,7 +766,6 @@
     .product-specs .title  {
         text-align: center;
         width: 100%;
-
     }
     .product-specs .detail-title {
         text-align: center;
@@ -775,6 +774,10 @@
     .reviewer {
         position: relative;
         margin: 0px;
+    }
+    .product-bk .product-reviews .title{
+        width: 100% ;
+        text-align: center;
     }
     .product-reviews .review-content .text-right
     {
