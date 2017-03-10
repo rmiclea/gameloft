@@ -11,7 +11,7 @@ $(function () {
 // Submit and checkbox functionalities
 
 $(function() {
-    $('#checkbox').click(function() {
+    $('#agree').click(function() {
         if ($(this).prop('checked') === true) {
             $('.submit-mask').addClass('inactive');
             $('.terms-text').removeClass('active');
@@ -23,7 +23,7 @@ $(function() {
 
 $(function() {
     $('.submit-mask').on('click', function() {
-        if ($('#checkbox').prop('checked') === false) {
+        if ($('#agree').prop('checked') === false) {
           $('.terms-text').addClass('active');
         } else {
           $('.terms-text').removeClass('active');
@@ -36,7 +36,7 @@ $(function() {
 $(function() {
     $('.demo_agree').on("click", function () {
     $('#demo').popup('hide');
-    $('#checkbox').attr('checked', 'checked');
+    $('#agree').attr('checked', 'checked');
     $('.submit-mask').addClass('inactive');
     $('.terms-text').removeClass('active');
     });

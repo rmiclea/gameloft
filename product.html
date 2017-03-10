@@ -4,6 +4,7 @@
         <title>
           Product
         </title>
+        <META NAME="viewport" CONTENT="width=device-width, height=device-height, initial-scale=1, user-scalable=no"/>
         <meta name="google-signin-client_id" content="410048874027-9lqsollp9knldr9lnpbi6bre927mavmb.apps.googleusercontent.com">
         <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
         <script src="js/tether.min.js"></script>
@@ -25,8 +26,8 @@
         <link rel="stylesheet" href="css/jquery.simplecolorpicker-glyphicons.css">
         <link rel="stylesheet" href="css/jquery.simplecolorpicker-fontawesome.css">
         <link rel="stylesheet" href="css/jquery.rateyo.min.css"/>
-        <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/jq-gallery-style.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body class="product-bk">
@@ -99,11 +100,11 @@
                             <li class="quantity">
                                 <p> Quantity:</p>
                                 <div class="sp-quantity">
-                                    <div class="sp-minus fff"> <a class="ddd" href="#">-</a></div>
+                                    <div class="sp-minus fff"> <a class="ddd" href="javascript:void(0)">-</a></div>
                                     <div class="sp-input">
                                         <input type="text" class="quntity-input" value="1" />
                                     </div>
-                                    <div class="sp-plus fff"> <a class="ddd" href="#">+</a></div>
+                                    <div class="sp-plus fff"> <a class="ddd" href="javascript:void(0)">+</a></div>
                                 </div>
                             </li>
                             <li class="buttons">
@@ -407,67 +408,157 @@
     <section class="related-products">
         <div class="container">
             <div class="row">
-        		<div class="product-grid col-md-4">
-        			<div class="product-grid__wrapper">
-        				<div class="product-grid__product-wrapper">
-        					<div class="product-grid__product">
-        						<div class="product-grid__img-wrapper">
-        							<img src="http://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-        						</div>
-        						<span class="product-grid__title">Product title</span>
-        						<span class="product-grid__price">1.399€</span>
-        						<div class="product-grid__extend-wrapper">
-        							<div class="product-grid__extend">
-        								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-        								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>
-        								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-        							</div>
-        						</div>
-        					</div>
-        				</div>
+                <div class="owl-carousel owl-theme">
+                    <div class="owl-item">
+                		<div class="product-grid col-md-4">
+                			<div class="product-grid-wrapper">
+            					<div class="product-grid-product">
+            						<div class="product-grid-img-wrapper">
+            							<img src="img/remote.png" alt="Img" class="product-grid-img" />
+            						</div>
+            						<div class="name">
+                                        <a href="javascript:void(0)">Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum</a>
+                                    </div>
+                                    <div class="price">
+                                        <div class="price-normal">
+                                            US $20.99
+                                        </div>
+                                    </div>
+                                    <div class="cart-wishlist">
+                                        <div class="cart">
+                                            <div class="cart-icon"></div>
+                                            <button class="cart-text"> Add to cart</button>
+                                        </div>
+                                        <div class="wishlist">
+                                            <div class="wishlist-icon"></div>
+                                            <button class="wishlist-text"> Add to wishlist</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="product-grid col-md-4">
+                            <div class="product-grid-wrapper">
+                                <div class="product-grid-product">
+            						<div class="product-grid-img-wrapper">
+            							<img src="img/remote.png" alt="Img" class="product-grid-img" />
+            						</div>
+            						<div class="name">
+                                        <a href="javascript:void(0)">Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum</a>
+                                    </div>
+                                    <div class="price">
+                                        <div class="price-normal col-md-6">
+                                            US $20.00
+                                        </div>
+                                        <div class="price-discounted col-md-6">
+                                            US $10.99
+                                        </div>
+                                    </div>
+                                    <div class="cart-wishlist">
+                                        <div class="cart">
+                                            <div class="cart-icon"></div>
+                                            <button class="cart-text"> Add to cart</button>
+                                        </div>
+                                        <div class="wishlist">
+                                            <div class="wishlist-icon"></div>
+                                            <button class="wishlist-text"> Add to wishlist</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="product-grid col-md-4">
+                            <div class="product-grid-wrapper">
+                                <div class="product-grid-product">
+            						<div class="product-grid-img-wrapper">
+            							<img src="img/remote.png" alt="Img" class="product-grid-img" />
+            						</div>
+            						<div class="name">
+                                        <a href="javascript:void(0)">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum</a>
+                                    </div>
+                                    <div class="price">
+                                        <div class="price-normal">
+                                            US $20.99
+                                        </div>
+                                    </div>
+                                    <div class="cart-wishlist">
+                                        <div class="cart">
+                                            <div class="cart-icon"></div>
+                                            <button class="cart-text"> Add to cart</button>
+                                        </div>
+                                        <div class="wishlist">
+                                            <div class="wishlist-icon"></div>
+                                            <button class="wishlist-text"> Add to wishlist</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="product-grid col-md-4">
+                            <div class="product-grid-wrapper">
+                                <div class="product-grid-product">
+            						<div class="product-grid-img-wrapper">
+            							<img src="img/remote.png" alt="Img" class="product-grid-img" />
+            						</div>
+            						<div class="name">
+                                        <a href="javascript:void(0)">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum</a>
+                                    </div>
+                                    <div class="price">
+                                        <div class="price-normal">
+                                            US $20.99
+                                        </div>
+                                    </div>
+                                    <div class="cart-wishlist">
+                                        <div class="cart">
+                                            <div class="cart-icon"></div>
+                                            <button class="cart-text"> Add to cart</button>
+                                        </div>
+                                        <div class="wishlist">
+                                            <div class="wishlist-icon"></div>
+                                            <button class="wishlist-text"> Add to wishlist</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-item">
+                        <div class="product-grid col-md-4">
+                            <div class="product-grid-wrapper">
+                                <div class="product-grid-product">
+            						<div class="product-grid-img-wrapper">
+            							<img src="img/remote.png" alt="Img" class="product-grid-img" />
+            						</div>
+            						<div class="name">
+                                        <a href="javascript:void(0)">Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum</a>
+                                    </div>
+                                    <div class="price">
+                                        <div class="price-normal">
+                                            US $20.99
+                                        </div>
+                                    </div>
+                                    <div class="cart-wishlist">
+                                        <div class="cart">
+                                            <div class="cart-icon"></div>
+                                            <button class="cart-text"> Add to cart</button>
+                                        </div>
+                                        <div class="wishlist">
+                                            <div class="wishlist-icon"></div>
+                                            <button class="wishlist-text"> Add to wishlist</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="product-grid col-md-4">
-        			<div class="product-grid__wrapper">
-        				<div class="product-grid__product-wrapper">
-        					<div class="product-grid__product">
-        						<div class="product-grid__img-wrapper">
-        							<img src="http://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-        						</div>
-        						<span class="product-grid__title">Product title</span>
-        						<span class="product-grid__price">1.399€</span>
-        						<div class="product-grid__extend-wrapper">
-        							<div class="product-grid__extend">
-        								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-        								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>
-        								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-        							</div>
-        						</div>
-        					</div>
-        				</div>
-                    </div>
-                </div>
-                <div class="product-grid col-md-4">
-        			<div class="product-grid__wrapper">
-        				<div class="product-grid__product-wrapper">
-        					<div class="product-grid__product">
-        						<div class="product-grid__img-wrapper">
-        							<img src="http://images.apple.com/euro/macbook/a/screens/specs/images/finish_silver_large.jpg" alt="Img" class="product-grid__img" />
-        						</div>
-        						<span class="product-grid__title">Product title</span>
-        						<span class="product-grid__price">1.399€</span>
-        						<div class="product-grid__extend-wrapper">
-        							<div class="product-grid__extend">
-        								<p class="product-grid__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis velit itaque odit.</p>
-        								<span class="product-grid__btn product-grid__add-to-cart"><i class="fa fa-cart-arrow-down"></i> Add to cart</span>
-        								<span class="product-grid__btn product-grid__view"><i class="fa fa-eye"></i> View more</span>
-        							</div>
-        						</div>
-        					</div>
-        				</div>
-                    </div>
-                </div>
-            </div>
+            </div<
         </div>
     </section>
         <script src="js/main.js"></script>
@@ -509,6 +600,24 @@
                 rating: 4.3
             });
         });
+
+        $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    nav:true,
+    dots: false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:3
+        }
+    }
+})
         </script>
     </body>
 </html>

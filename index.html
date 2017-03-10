@@ -4,12 +4,14 @@
         <title>
           Register
         </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="google-signin-client_id" content="410048874027-9lqsollp9knldr9lnpbi6bre927mavmb.apps.googleusercontent.com">
         <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
         <script src="js/tether.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.popupoverlay.js"></script>
         <script src="https://use.fontawesome.com/88c4929313.js"></script>
+        <script src="js/jquery.validate.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
         <link rel="stylesheet" type="text/css" href="css/tether.min.css">
@@ -24,13 +26,19 @@
                         <p> lets find our </br> villain</p>
                     </div>
                     <form action="" id="myform" class="credentials">
-                        <input type="text" name="FirstName" placeholder="First Name">
-                        <input type="text" name="LastName" placeholder="Last Name">
+                        <label for="firstname"></label>
+                        <input id="firstname" name="firstname" placeholder="First Name">
+                        <lable for="lastname"></lable>
+                        <input type="text" id="lastname" name="lastname" placeholder="Last Name">
+                        <lable for="email"></lable>
                         <input type="email" id="email" name="email" placeholder="Email">
-                        <input type="password" placeholder="Password">
-                        <input type="password" placeholder="Confirm Password">
+                        <lable for="password"></lable>
+                        <input type="password" id="password" name="password" placeholder="Password">
+                        <lable for="confirm_password"></lable>
+                        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password">
                         <div class="terms-container">
-                          <input type="checkbox" id="checkbox">
+                        <label for="agree"></label>
+                        <input type="checkbox" class="checkbox" id="agree" name="agree">
                           <p class="terms-text">I agree with the <a class="demo_open" href="#demo">Terms and Conditions</a>!</p>
                           <div id="demo">
                                 <div class="terms-popup">
@@ -110,6 +118,51 @@ Williamsburg hashtag farm-to-table bushwick quinoa enamel pin. Disrupt fap austi
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));
         });
+
+		// validate signup form on keyup and submit
+		$("#myform").validate({
+			rules: {
+				firstname: "required",
+				lastname: "required",
+				username: {
+					required: true,
+					minlength: 2
+				},
+				password: {
+					required: true,
+					minlength: 5
+				},
+				confirm_password: {
+					required: true,
+					minlength: 5,
+					equalTo: "#password"
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				agree: "required"
+			},
+			messages: {
+				firstname: "Please enter your firstname",
+				lastname: "Please enter your lastname",
+				username: {
+					required: "Please enter a username",
+					minlength: "Your username must consist of at least 2 characters"
+				},
+				password: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long"
+				},
+				confirm_password: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long",
+					equalTo: "Please enter the same password as above"
+				},
+				email: "Please enter a valid email address",
+				agree: "Please accept our policy"
+			}
+		});
         </script>
     </body>
 </html>

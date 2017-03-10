@@ -88,7 +88,9 @@ input {
         color:orange;
     }
 }
-
+.error {
+    font-family: "Nova Round";
+}
 .social-button-container {
     display: inline-block;
     position: relative;
@@ -168,5 +170,11 @@ input {
     color: $c-secondary;
 }
 .product-bk {
-    background-color: #fff;
+    background: #ededed;
+    background-size: cover;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
 }
